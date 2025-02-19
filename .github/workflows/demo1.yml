@@ -4,10 +4,15 @@ on:
     types:
       - opened
       - edited
+    branches:
+      - 'main'
+
   workflow_dispatch: 
   push:
     branches:
       - 'main'
+    paths-ignore:
+      - '.github/worflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
